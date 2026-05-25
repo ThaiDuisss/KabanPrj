@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: Api-Gateway
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: user-service
+              uri: lb://user-service
+              predicates:
+                - Path=/user/**
+              filters:
+                - name: RequestRateLimiter
+                  args:
+                    redis-rate-limiter.replenishRate: 10
+                    redis-rate-limiter.burstCapacity: 20
+                    redis-rate-limiter.requestedTokens: 1
+
+            - id: task-service
+              uri: lb://task-service
+              predicates:
+                - Path=/task/**
+
+            - id: board-service
+              uri: lb://board-service
+              predicates:
+                - Path=/board/**
+
+            - id: notification-service
+              uri: lb://notification-service
+              predicates:
+                - Path=/notification/**
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+        defaultZone: http://localhost:8761/eureka/
