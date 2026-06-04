@@ -1,21 +1,25 @@
 package org.kanban.userservice.application.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Value;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.kanban.userservice.domain.model.User;
 
 import java.time.LocalDateTime;
 
-@Value
+@Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserResponse {
-    Long id;
-    String username;
-    String email;
-    String fullName;
-    String avatarUrl;
-    LocalDateTime createdAt;
-    LocalDateTime updatedAt;
+    private Long id;
+    private String username;
+    private String email;
+    private String fullName;
+    private String avatarUrl;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public static UserResponse fromDomain(User user) {
         if (user == null) {

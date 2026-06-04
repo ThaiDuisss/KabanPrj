@@ -1,11 +1,15 @@
 package org.kanban.userservice.application.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Value;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Value
+@Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UpdateUserCommand {
-    String fullName;
-    String avatarUrl;
+    private String fullName;
+    private String avatarUrl;
 }
