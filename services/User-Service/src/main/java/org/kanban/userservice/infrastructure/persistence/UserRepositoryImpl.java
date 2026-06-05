@@ -1,4 +1,4 @@
-package org.kanban.userservice.infrastructure.adapter.out.persistence;
+package org.kanban.userservice.infrastructure.persistence;
 
 import lombok.RequiredArgsConstructor;
 import org.kanban.userservice.domain.model.Email;
