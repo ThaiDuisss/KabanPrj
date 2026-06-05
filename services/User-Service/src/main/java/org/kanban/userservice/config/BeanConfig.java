@@ -1,4 +1,4 @@
-package org.kanban.userservice.infrastructure.config;
+package org.kanban.userservice.config;
 
 import org.kanban.userservice.application.service.UserService;
 import org.kanban.userservice.domain.repository.UserRepository;

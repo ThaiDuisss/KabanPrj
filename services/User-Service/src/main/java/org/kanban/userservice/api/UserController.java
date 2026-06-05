@@ -1,4 +1,4 @@
-package org.kanban.userservice.infrastructure.adapter.in.web;
+package org.kanban.userservice.api;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

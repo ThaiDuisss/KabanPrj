@@ -1,4 +1,4 @@
-package org.kanban.userservice.infrastructure.adapter.in.web.exception;
+package org.kanban.userservice.api.exception;
 
 import org.kanban.userservice.domain.exception.UserDomainException;
 import org.springframework.http.HttpStatus;
