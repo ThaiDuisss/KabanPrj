@@ -1,4 +1,8 @@
 package org.kanban.taskservice.domain.vo;
 
-public class TaskPriority {
+public enum TaskPriority {
+    LOW,
+    MEDIUM,
+    HIGH,
+    URGENT
 }
